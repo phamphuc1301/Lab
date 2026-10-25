@@ -1,0 +1,222 @@
+{
+  "@@locale": "en",
+  "appTitle": "Money Manager",
+  "navOverview": "Overview",
+  "navHistory": "History",
+  "navBudgets": "Budgets",
+  "navSettings": "Settings",
+  "add": "Add",
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "kindName": "{kind, select, expense{Expense} income{Income} other{}}",
+  "@kindName": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryName": "{category, select, food{Food & Drink} groceries{Groceries} transport{Transport} shopping{Shopping} bills{Bills & Utilities} housing{Housing} health{Health} entertainment{Entertainment} education{Education} travel{Travel} salary{Salary} bonus{Bonus} investment{Investment} otherIncome{Other income} other{Other}}",
+  "@categoryName": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "allSpending": "All spending",
+  "levelExceeded": "Over budget",
+  "levelWarning": "Close to limit",
+  "levelTrending": "Spending fast",
+  "levelOk": "On track",
+  "budgetExceededMessage": "Over budget by {over}. Spent {spent} of {limit}.",
+  "@budgetExceededMessage": {
+    "placeholders": {
+      "over": {
+        "type": "String"
+      },
+      "spent": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetWarningMessage": "{percent}% used, {left} left.",
+  "@budgetWarningMessage": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      },
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetDailyAllowance": " About {amount}/day for the rest of the month.",
+  "@budgetDailyAllowance": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetTrendingMessage": "At this pace you'll spend about {projected} this month, {over} over the limit.",
+  "@budgetTrendingMessage": {
+    "placeholders": {
+      "projected": {
+        "type": "String"
+      },
+      "over": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetOkMessage": "{left} left of {limit}.",
+  "@budgetOkMessage": {
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "notifyExceededTitle": "Budget exceeded: {name}",
+  "@notifyExceededTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "notifyWarningTitle": "Budget warning: {name}",
+  "@notifyWarningTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "previousMonth": "Previous month",
+  "nextMonth": "Next month",
+  "spentThisMonth": "Spent this month",
+  "income": "Income",
+  "balance": "Balance",
+  "budgetLeft": "Budget left",
+  "spendingByCategory": "Spending by category",
+  "dailySpending": "Daily spending",
+  "recent": "Recent",
+  "noTransactionsThisMonth": "No transactions this month. Tap Add to scan a receipt.",
+  "chartTapHint": "Tap a bar to see the day",
+  "chartDailyBudget": "Dashed line: daily budget {amount}",
+  "@chartDailyBudget": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "chartDay": "Day {day}: {amount}",
+  "@chartDay": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "scanWithCamera": "Scan receipt with camera",
+  "importFromGallery": "Import receipt from gallery",
+  "importImage": "Import receipt image",
+  "pasteReceiptText": "Paste receipt text",
+  "addManually": "Add manually",
+  "readingReceipt": "Reading receipt…",
+  "readText": "Read",
+  "ocrUnavailable": "Text recognition is not available on this platform.",
+  "noticeScanFailed": "Couldn't read the receipt ({error}). Please enter the details.",
+  "@noticeScanFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noticeNoTotal": "The total couldn't be found. Please enter the amount.",
+  "noticeCheck": "Filled in from the receipt. Check the values before saving.",
+  "newTransaction": "New transaction",
+  "editTransaction": "Edit transaction",
+  "amount": "Amount",
+  "category": "Category",
+  "merchant": "Merchant",
+  "payer": "Payer",
+  "date": "Date",
+  "note": "Note",
+  "receipt": "Receipt",
+  "hasReceipt": "Has receipt",
+  "removeImage": "Remove image",
+  "deleteTransaction": "Delete transaction",
+  "deleteTransactionConfirm": "Delete this transaction?",
+  "searchHint": "Merchant, note or category",
+  "filterAll": "All",
+  "noTransactionsYet": "No transactions yet",
+  "noTransactionsHint": "Tap Add to scan a receipt or add a transaction.",
+  "noMatches": "No matches",
+  "noMatchesHint": "Try a different search or filter.",
+  "budgetButton": "Budget",
+  "noBudgets": "No budgets",
+  "noBudgetsHint": "Set a monthly limit for all spending or for a category.",
+  "budgetsFooter": "Budgets reset every month. You'll get a notification when spending passes the warning level or the limit.",
+  "spentOf": "{spent} of {limit}",
+  "@spentOf": {
+    "placeholders": {
+      "spent": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "newBudget": "New budget",
+  "editBudget": "Edit budget",
+  "appliesTo": "Applies to",
+  "monthlyLimit": "Monthly limit",
+  "warnAt": "Warn me at {percent}% of the limit",
+  "@warnAt": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "currency": "Currency",
+  "language": "Language",
+  "languageSystem": "System default",
+  "budgetAlerts": "Budget alerts",
+  "budgetAlertsHint": "Notify when a budget reaches its warning level or limit",
+  "exportCsv": "Export transactions (CSV)",
+  "transactionCount": "{count, plural, =1{1 transaction} other{{count} transactions}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dataFolder": "Data folder",
+  "localOnly": "All data, including receipt images, is stored only on this device.",
+  "exportedTo": "Exported to {path}",
+  "@exportedTo": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  }
+}

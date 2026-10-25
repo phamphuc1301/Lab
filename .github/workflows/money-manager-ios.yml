@@ -1,0 +1,52 @@
+name: money-manager iOS
+
+on:
+  push:
+    paths: ["money-manager/**", ".github/workflows/money-manager-ios.yml"]
+  pull_request:
+    paths: ["money-manager/**"]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: money-manager
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Run unit tests
+        run: |
+          DEVICE=$(xcrun simctl list devices available | grep -m1 -oE 'iPhone [^(]+' | sed 's/ *$//')
+          echo "Testing on: $DEVICE"
+          xcodebuild test \
+            -project MoneyManager.xcodeproj \
+            -scheme MoneyManager \
+            -destination "platform=iOS Simulator,name=$DEVICE" \
+            -quiet CODE_SIGNING_ALLOWED=NO
+
+      # Unsigned build for sideloading (e.g. with Sideloadly on Windows, which signs it with your Apple ID).
+      - name: Build unsigned IPA
+        run: |
+          xcodebuild build \
+            -project MoneyManager.xcodeproj \
+            -scheme MoneyManager \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" -quiet
+          mkdir -p Payload
+          cp -R build/Build/Products/Release-iphoneos/MoneyManager.app Payload/
+          zip -qr MoneyManager-unsigned.ipa Payload
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MoneyManager-unsigned-ipa
+          path: money-manager/MoneyManager-unsigned.ipa
